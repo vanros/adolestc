@@ -1,0 +1,62 @@
+<div id="starter" ng-init="" ng-destroy=""><div class="component-holder ng-binding ng-scope" data-component="crn-navbar" id="crn-navbar-986427">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="component-holder ng-binding ng-scope navbar-brand" data-component="crn-image" href="#/home"> <img src="plugins/cronapp-framework-js/img/logo.png" style="max-height:30px; margin-top:-3px" id="crn-navbar-logo"> </a> 
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" style="float:none">
+          <li class="dropdown component-holder" data-component=""> <a href="#/home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="blockly.js.blockly.PainelAniversariantes.exibir()"> <i class="fa fa-lg fa-home"></i> <span>{{"Home.view.Home" | translate}}</span> </a> </li>
+          <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-users fa-lg"></i> <span>{{"Home.view.Admin" | translate}}</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              <li class="active"><a href="#/home/admin/user" class="component-holder" data-component="crn-anchor" ng-click="blockly.js.blockly.PainelAniversariantes.esconder()">Líderes</a></li>
+            <li class=""><a href="#/home/admin/grupodevida" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor" ng-click="blockly.js.blockly.PainelAniversariantes.esconder()">GVs</a></li></ul> </li>
+          <li class="dropdown component-holder navbar-right" data-component="crn-menu-item"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-lg fa-gear"></i> <span>{{"ChooseTheme" | translate}}</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              <li ng-repeat="theme in themes" ng-click="changeTheme(theme)"> <a href="javascript:void(0);" ng-class="{'bg-primary': myTheme==theme}">{{theme}} <i class="fa fa-lg fa-check pull-right" ng-if="myTheme==theme"></i></a></li>
+            </ul> </li>
+          <li class="dropdown component-holder navbar-right" data-component="crn-menu-item"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img class="user-avatar" alt="{{session.user.name}}" ng-src="{{session.user.picture || 'plugins/cronapp-framework-js/dist/img/nophoto.png'}}" style="max-height:18px;max-width:18px"> <span>{{session.user.name}}</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              <li><a class="component-holder" data-toggle="modal" data-target="#modalPassword" data-component="crn-anchor">{{"Home.view.ChangePassword" | translate}}</a></li>
+              <li ng-click="logout()"><a href="javascript:void(0);"><span>{{"Home.view.Logout" | translate}}</span></a></li>
+            </ul> </li>
+        <li class="dropdown component-holder" data-component="crn-menu-item"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-heart"></i> <span>Controle</span> <span class="caret"></span> </a> <ul class="dropdown-menu" style="">   <li class="active"><i class="glyphicon glyphicon-user"></i><a href="#/home/logged/adolescente" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor" ng-click="blockly.js.blockly.PainelAniversariantes.esconder()">Adolescentes</a></li> <li class=""><i class="fa fa-calendar"></i><a href="#/home/logged/atividades" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor" ng-click="blockly.js.blockly.PainelAniversariantes.esconder()">Atividades</a></li></ul></li></ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div ui-view="" class="container-fluid main-view" data-container="true">
+</div><div class="component-holder ng-binding ng-scope" data-component="crn-panel" id="crn-panel-876983"><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-panel" id="crn-panel-616393"><div class="panel panel-primary" xattr-theme="panel-primary" data-container="true"><div class="panel-body" data-container="true" id="paineis"><div class="panel col-md-1 panel-primary" xattr-theme="panel-primary" data-container="true" style="width: 438px; height: 291px;" id="painel_aniversariantes"><div class="panel-heading col-md-1" data-container="true" style="width: 420px; height: 76px;"><div class="panel-title col-md-1" style="width: 270px; height: 29px;"><div class="lead component-holder text-center col-md-1" data-component="crn-title" xattr-position="text-center" style="width: 359px; height: 29px;">Aniversariantes do Mês<i class="component-holder col-md-12 fa fa-birthday-cake" data-component="crn-icon" id="crn-icon-936084"></i></div></div></div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-datasource" id="crn-datasource-190153"><datasource name="aniversariantes" entity="" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource"></datasource></div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-datasource" id="crn-datasource-322904"></div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-grid" id="crn-grid-714354"><div crn-datasource="aniversariantes"><table class="table table-bordered table-hover"><thead><tr class="table-header"><th class="active"><div data-container="true">Nome</div></th><th><div data-container="true">Data de Aniversário</div></th><th><div data-container="true">GV</div></th></tr></thead><tbody><tr class="table-content" ng-repeat="rowData in datasource.data"><td class="active"><div data-container="true">{{rowData.nome}}</div></td><td><div data-container="true">{{rowData.dia}}/{{rowData.mes}}</div></td><td><div data-container="true">{{rowData.gv}}</div></td></tr></tbody></table><div class="table-footer-controls"><button class="btn btn-default btn-block btn-clicked" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">Load more...</button></div></div></div></div><div class="panel panel-primary col-md-1" xattr-theme="panel-primary" data-container="true" style="width: 438px; height: 291px;" id="painel_aniversariantes"><div class="panel-heading col-md-1" data-container="true" style="width: 420px; height: 76px;"><div class="panel-title col-md-1" style="width: 270px; height: 29px;"><div class="lead component-holder text-center col-md-1" data-component="crn-title" xattr-position="text-center" style="width: 359px; height: 29px;">Próximas Atividades<i class="component-holder col-md-12 glyphicon glyphicon-calendar" data-component="crn-icon" id="crn-icon-936084"></i></div></div></div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-datasource" id="crn-datasource-877422"><datasource name="atividades" entity="" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource"></datasource></div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-datasource" id="crn-datasource-322904"></div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-grid" id="crn-grid-714354"><div crn-datasource="atividades"><table class="table table-bordered table-hover"><thead><tr class="table-header"><th class="active"><div data-container="true">Descrição</div></th><th><div data-container="true">Data</div></th><th><div data-container="true">GV</div></th></tr></thead><tbody><tr class="table-content" ng-repeat="rowData in datasource.data"><td class="active"><div data-container="true">{{rowData.descricao}}</div></td><td><div data-container="true">{{rowData.dia}}/{{rowData.mes}}</div></td><td><div data-container="true">{{rowData.gv}}</div></td></tr></tbody></table><div class="table-footer-controls"><button class="btn btn-default btn-block btn-clicked" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">Load more...</button></div></div></div></div><div class="panel-heading" data-container="true"></div></div></div></div></div>
+
+<div class="modal fade" id="modalPassword">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">{{"Home.view.ChangePassword" | translate}}</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-validation" autocomplete="off" name="form" role="form">
+          <div class="text-danger wrapper text-center" ng-show="authError">
+          </div>
+          <div class="list-group list-group-sm">
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}" ng-required="true">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading">{{"Home.view.ChangePassword" | translate}}</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{'Home.view.Close' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</div></div>

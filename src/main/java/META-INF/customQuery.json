@@ -1,0 +1,419 @@
+{
+	"auth": {
+		"customId": "auth",
+		"queryName": "Autenticar",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": "select o from User o where o.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/auth/"
+	},
+	"roles": {
+		"customId": "roles",
+		"queryName": "Obter Autorização",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Role",
+		"entityFullName": "app.entity.Role",
+		"query": "select o.id from Role o where o.user.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"user": null
+		},
+		"security": {
+			"id": null,
+			"user": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/roles/"
+	},
+	"tenant": {
+		"customId": "tenant",
+		"queryName": "Obter Id de Multi-inquilino",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": "select u.company.id from User u where u.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/tenant/"
+	},
+	"rhm3z8nos9pz": {
+		"customId": "listaAdoles",
+		"queryName": "listaAdoles",
+		"screen": "src/main/webapp/views/logged/adolescente.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Adolescente",
+		"entityFullName": "app.entity.Adolescente",
+		"query": {
+			"isValid": true,
+			"rulesEntity": [
+				{
+					"entity": "Adolescente",
+					"alias": "a",
+					"namespace": "app.entity.Adolescente"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "a"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"not": false,
+				"valid": true,
+				"rules": []
+			}
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"nome": null,
+			"dataDeNascimento": null,
+			"idade": null,
+			"contato": null,
+			"responsavel": null,
+			"contatoDoResponsavel": null,
+			"ingressante": null,
+			"sexo": null,
+			"observacoes": null,
+			"foto": null,
+			"grupoDeVida": null
+		},
+		"security": {
+			"id": null,
+			"nome": null,
+			"dataDeNascimento": null,
+			"idade": null,
+			"contato": null,
+			"responsavel": null,
+			"contatoDoResponsavel": null,
+			"ingressante": null,
+			"sexo": null,
+			"observacoes": null,
+			"foto": null,
+			"grupoDeVida": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/rhm3z8nos9pz/"
+	},
+	"1jeir7wumvqk9": {
+		"customId": "atividades",
+		"queryName": "atividades",
+		"screen": "src/main/webapp/views/logged/home.view.html",
+		"sourceType": "blockly",
+		"blockly": {
+			"blocklyClass": "blockly.Adoles",
+			"blocklyMethod": "atividades",
+			"blocklyLanguage": "java",
+			"blocklyJson": {
+				"namespace": "blockly.Adoles",
+				"classNameNew": "Adoles",
+				"classNameOld": "Adoles",
+				"sourcePath": "src/main/java/blockly/Adoles.blockly",
+				"language": "java",
+				"class": "blockly.Adoles",
+				"methods": [
+					{
+						"name": "atividades",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "calcula_idade",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "aniversariantes",
+						"hasReturn": "true",
+						"params": []
+					}
+				]
+			},
+			"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.Adoles:atividades', null, null)",
+			"blocklyGETMethod": "atividades",
+			"blocklyPOSTMethod": "atividades",
+			"blocklyPUTMethod": "atividades",
+			"blocklyDELETEMethod": "atividades",
+			"blocklyFILTERMethod": "atividades"
+		},
+		"entitySimpleName": null,
+		"entityFullName": null,
+		"query": "",
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {},
+		"security": {},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1jeir7wumvqk9/"
+	},
+	"vevv20t2uqt2": {
+		"customId": "aniversariantes",
+		"queryName": "aniversariantes",
+		"screen": "src/main/webapp/views/logged/home.view.html",
+		"sourceType": "blockly",
+		"blockly": {
+			"blocklyClass": "blockly.Adoles",
+			"blocklyMethod": "aniversariantes",
+			"blocklyLanguage": "java",
+			"blocklyJson": {
+				"namespace": "blockly.Adoles",
+				"classNameNew": "Adoles",
+				"classNameOld": "Adoles",
+				"sourcePath": "src/main/java/blockly/Adoles.blockly",
+				"language": "java",
+				"class": "blockly.Adoles",
+				"methods": [
+					{
+						"name": "atividades",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "calcula_idade",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "aniversariantes",
+						"hasReturn": "true",
+						"params": []
+					}
+				]
+			},
+			"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.Adoles:aniversariantes', null, null)",
+			"blocklyGETMethod": "aniversariantes",
+			"blocklyPOSTMethod": "aniversariantes",
+			"blocklyPUTMethod": "aniversariantes",
+			"blocklyDELETEMethod": "aniversariantes",
+			"blocklyFILTERMethod": "aniversariantes"
+		},
+		"entitySimpleName": null,
+		"entityFullName": null,
+		"query": "",
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {},
+		"security": {},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/vevv20t2uqt2/"
+	}
+}
